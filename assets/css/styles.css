@@ -44,6 +44,15 @@
   border-color: #535353;
   border-radius: 4px;
 }
+.input:disabled{
+  color-scheme: dark;
+  min-width: 300px;
+  max-width: 500px;
+  height: 40px;
+  color: #f8f9fa;
+  background: #212529;
+  border: none;
+}
 
 .input:focus {
   border-radius: 4px;
@@ -70,6 +79,13 @@ body {
   border-style: none;
   background: #af23a5;
   color: #f8f9fa;
+}
+.btn-primary.disabled{
+  width: 125px;
+  height: 40px;
+  color: #c1c1c1;
+  background: #535353 !important;
+  border-style: none;
 }
 
 .btn-primary:active {
@@ -110,6 +126,7 @@ body {
   outline: none;
   box-shadow: none;
 }
+
 
 .btn-secondary:active {
   background: rgba(86, 94, 100, 0);
