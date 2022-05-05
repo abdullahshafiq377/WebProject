@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Study Buddy</title>
-</head>
-<body>
 
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
+    <title>Login</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #212529;
+            margin-top: 50px !important;
+            padding: 0 !important;
+        }
+
+        .main-container {
+            background: #2d3134;
+            min-width: 300px;
+            max-width: 500px;
+            height: 85vh;
+        }
+
+        .form-label {
+            color: #f8f9fa;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="container main-container">
+    <div class="row">
+        <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
+            <div class="row">
+                <div class="col"><label class="col-form-label form-label" style="padding: 100px 0 20px 0">User ID</label></div>
+            </div>
+            <div class="row">
+                <div class="col d-flex d-xl-flex justify-content-center justify-content-xl-center">
+                    <input class="input" type="text" style="width: 500px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
+            <div class="row">
+                <div class="col"><label class="col-form-label form-label" style="padding: 50px 0 20px 0">Password</label></div>
+            </div>
+            <div class="row">
+                <div class="col d-flex d-xl-flex justify-content-center justify-content-xl-center">
+                    <input class="input" type="password" style="width: 500px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex d-xl-flex justify-content-center justify-content-xl-center" style="padding: 100px 0 0 0">
+            <button id="login-btn" class="btn btn-primary" type="button">Login</button>
+        </div>
+    </div>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
+
 </html>
