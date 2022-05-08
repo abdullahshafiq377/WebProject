@@ -56,12 +56,7 @@
                         <span class="material-symbols-rounded">supervisor_account</span>
                         <span class="nav_name">Teachers</span>
                     </a>
-                    <a class="nav_link" href="courseList.html">
-                        <span class="material-symbols-rounded">library_books</span>
-                        <span class="nav_name">Courses</span>
-                    </a>
-
-                    <a class="nav_link" href="#">
+                    <a class="nav_link" data-bs-target="#reset-password-modal" data-bs-toggle="modal">
                         <span class="material-symbols-rounded">restart_alt</span>
                         <span class="nav_name">Reset Password</span>
                     </a>
@@ -102,41 +97,41 @@
                     </thead>
                     <tbody>
 
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>1.</td>
                         <td>Humaira Waqas</td>
                         <td>humaira@gmail.com</td>
 
                     </tr>
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>2.</td>
                         <td>Asif Muhammad</td>
                         <td>asif@gmail.com</td>
 
                     </tr>
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>3.</td>
                         <td>Name</td>
                         <td>Email</td>
 
                     </tr>
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>4.</td>
                         <td>Name</td>
                         <td>Email</td>
 
                     </tr>
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>5.</td>
                         <td>Name</td>
                         <td>Email</td>
                     </tr>
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>6.</td>
                         <td>Name</td>
                         <td>Email</td>
                     </tr>
-                    <tr>
+                    <tr data-bs-target="#teacher-details-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <td>7.</td>
                         <td>Name</td>
                         <td>Email</td>
@@ -168,6 +163,100 @@
 </div>
 
 
+
+<div aria-hidden="true" aria-labelledby="teacherDetails" class="modal fade" id="teacher-details-modal" tabindex="-1">
+    <div style="background: rgba(0,0,0,0.7); height: 100%; width: 100%;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="color: #f8f9fa;">
+                    <h4 class="modal-title">Mahnoor Zaheer</h4>
+                    <button aria-label="Close" class="" data-bs-dismiss="modal"
+                            style="background: transparent; border: none"
+                            type="button">
+                        <span class="material-symbols-rounded" style="color: white">close</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="color: #f8f9fa;">
+                    <div class="row">
+                        <div class="col-xl-12 d-flex d-lg-flex justify-content-center justify-content-lg-center align-items-lg-center"
+                             style="height: 125px;"><img class="rounded-circle" src="../assets/img/hczKIze.jpg"
+                                                         style="height: 100px;"></div>
+                        <div class="col"><label class="student-details-label">Email</label>
+                            <h6>mahnoorzaheer359@gmail.com</h6>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 20px 0 20px 0">
+                        <div class="col">
+                            <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
+                                <div class="col"><label class="student-details-label">Father's Name</label>
+                                    <h6>Zaheer Tahir</h6>
+                                </div>
+                            </div>
+                            <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
+                                <div class="col"><label class="student-details-label">Nationality</label>
+                                    <h6>Pakistani</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
+                                <div class="col"><label class="student-details-label">Date of Birth</label>
+                                    <h6>13/03/2001</h6>
+                                </div>
+                            </div>
+
+
+                            <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
+                                <div class="col"><label class="student-details-label">Contact</label>
+                                    <h6>03366333147</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="col d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-left: 50px">
+                        <button class="btn btn-secondary" type="button" onclick="editTeacherOnClick()">Edit</button>
+                    </div>
+                    <div class="col d-flex d-lg-flex justify-content-center justify-content-lg-center" style="margin-right: 50px">
+                        <button class="btn btn-secondary btn-secondary-danger" type="button">Delete</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div aria-hidden="true" aria-labelledby="ResetPassword" class="modal fade" id="reset-password-modal" tabindex="-1">
+    <div style="background: rgba(0,0,0,0.7); height: 100%; width: 100%;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="color: #f8f9fa;">
+                    <h4 class="modal-title">Reset Password</h4>
+                    <button aria-label="Close" class="" data-bs-dismiss="modal" type="button" style="background: transparent; border: none">
+                        <span class="material-symbols-rounded" style="color: white">close</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="color: #f8f9fa;">
+                    <div class="row">
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-3 d-sm-flex justify-content-sm-center align-items-sm-center">
+                            <label class="col-form-label">Email</label></div>
+                        <div class="col d-sm-flex d-md-flex justify-content-sm-end align-items-sm-center justify-content-md-end">
+                            <input class="input" type="text"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 

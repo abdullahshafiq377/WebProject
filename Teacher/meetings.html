@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport">
-    <title>Student Details</title>
+    <title>Meetings</title>
     <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
     <link href="../assets/css/styles.css" rel="stylesheet">
@@ -15,7 +15,6 @@
 
 <body id="body-pd"
       style="--bs-primary: #af23a5;--bs-primary-rgb: 175,35,165;--bs-secondary: #535353;--bs-secondary-rgb: 83,83,83;">
-
 
 
 <div id="sidemenu">
@@ -43,27 +42,14 @@
                     <i class="fas fa-book-reader bx bx-layer nav_logo-icon"></i>
                     <span class="nav_logo-name">Study Buddy</span>
                 </a>
-                <a class="nav_link" href="home.html">
-                    <span class="material-symbols-rounded">home</span>
-                    <span class="nav_name">Home</span>
+                <a class="nav_link active" href="meetings.html">
+                    <span class="material-symbols-rounded">duo</span>
+                    <span class="nav_name">Meetings</span>
                 </a>
                 <div class="nav_list">
-                    <a class="nav_link active" href="studentList.html">
-                        <span class="material-symbols-rounded">person</span>
-                        <span class="nav_name">Students</span>
-                    </a>
-                    <a class="nav_link" href="teacherList.html">
-                        <span class="material-symbols-rounded">supervisor_account</span>
-                        <span class="nav_name">Teachers</span>
-                    </a>
-                    <a class="nav_link" href="courseList.html">
-                        <span class="material-symbols-rounded">library_books</span>
-                        <span class="nav_name">Courses</span>
-                    </a>
-
-                    <a class="nav_link" href="#">
-                        <span class="material-symbols-rounded">restart_alt</span>
-                        <span class="nav_name">Reset Password</span>
+                    <a class="nav_link" href="chats.html">
+                        <span class="material-symbols-rounded">chat</span>
+                        <span class="nav_name">Chats</span>
                     </a>
                 </div>
             </div>
@@ -72,25 +58,46 @@
 </div>
 
 <div class="container">
+
     <div class="row">
-        <div class="col" style="padding-top: 30px;padding-bottom: 15px;">
-            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="bc-item" href="home.html">Home</a></li>
-                    <li class="breadcrumb-item"><a class="bc-item" href="studentList.html">Students</a></li>
-                    <li class="breadcrumb-item bc-current" aria-current="page"></li>
-                </ol>
-                <h1 class="page-heading">Student Details</h1>
-            </nav>
+        <div class="col-lg-9" style="padding-top: 30px;padding-bottom: 15px;">
+            <h1 class="page-heading">Meetings</h1>
+        </div>
+        <div class="col-lg-3 d-flex d-lg-flex justify-content-end align-items-center justify-content-lg-end align-items-lg-center justify-content-xl-end"
+             style="height: 75px;">
+            <button class="btn btn-secondary" type="button" onclick="joinMeetingBtnOnClick()">New</button>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="background: #212529;">
+                <div class="card-body">
+                    <div class="row" style="padding: 5px 0 15px 0">
+                        <div class="col"><label class="col-form-label" style="color: #f8f9fa;">Meeting Title</label>
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-secondary" onclick="joinMeetingBtnOnClick()" type="button">Join
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row" style="padding: 15px 0 0 0">
+                        <div class="col"><label class="col-form-label" style="color: #f8f9fa;">Meeting Title</label>
+                        </div>
+                        <div class="col-lg-2">
+                            <button class="btn btn-secondary" onclick="joinMeetingBtnOnClick()" type="button">Join
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
-
-
-
-
 
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/js/zectStudio---Sidebar-Menu-by-bbbootstrap.js"></script>
+<script src="scripts/meetings.js"></script>
 </body>
 </html>

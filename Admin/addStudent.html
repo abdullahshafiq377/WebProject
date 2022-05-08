@@ -16,8 +16,6 @@
 <body id="body-pd"
       style="--bs-primary: #af23a5;--bs-primary-rgb: 175,35,165;--bs-secondary: #535353;--bs-secondary-rgb: 83,83,83;">
 
-
-
 <div id="sidemenu">
     <header class="header" id="header">
         <div class="header_toggle" id="header_toggle-1">
@@ -56,12 +54,7 @@
                         <span class="material-symbols-rounded">supervisor_account</span>
                         <span class="nav_name">Teachers</span>
                     </a>
-                    <a class="nav_link" href="courseList.html">
-                        <span class="material-symbols-rounded">library_books</span>
-                        <span class="nav_name">Courses</span>
-                    </a>
-
-                    <a class="nav_link" href="#">
+                    <a class="nav_link" data-bs-target="#reset-password-modal" data-bs-toggle="modal">
                         <span class="material-symbols-rounded">restart_alt</span>
                         <span class="nav_name">Reset Password</span>
                     </a>
@@ -72,62 +65,62 @@
 </div>
 
 <div class="container">
-
     <div class="row">
         <div class="col" style="padding-top: 30px;padding-bottom: 15px;">
-            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="bc-item" href="home.html">Home</a></li>
                     <li class="breadcrumb-item"><a class="bc-item" href="studentList.html">Students</a></li>
-                    <li class="breadcrumb-item bc-current" aria-current="page"></li>
+                    <li aria-current="page" class="breadcrumb-item bc-current"></li>
                 </ol>
                 <h1 class="page-heading">Add Student</h1>
             </nav>
         </div>
     </div>
+
     <div class="row">
         <div class="col-lg-9">
             <form>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Registration Number</label>
-                        <input id="regNo" class="form-control input" type="text">
+                        <input class="form-control input" id="regNo" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Name</label>
-                        <input id="name" class="form-control input" type="text">
+                        <input class="form-control input" id="name" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Father's Name</label>
-                        <input id="fname" class="form-control input" type="text">
+                        <input class="form-control input" id="fname" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Date of Birth</label>
-                        <input id="dob" class="form-control input" type="date">
+                        <input class="form-control input" id="dob" type="date">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Nationality</label>
-                        <input id="nationality" class="form-control input" type="text">
+                        <input class="form-control input" id="nationality" type="text">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Contact</label>
-                        <input id="contact" class="form-control input" type="tel">
+                        <input class="form-control input" id="contact" type="tel">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col" style="padding-top: 10px;padding-bottom: 10px;">
                         <label class="form-label">Email</label>
-                        <input id="email" class="form-control input" type="email">
+                        <input class="form-control input" id="email" type="email">
                     </div>
                 </div>
             </form>
@@ -151,13 +144,41 @@
     <div class="row">
         <div class="col d-flex d-lg-flex justify-content-center align-items-center justify-content-lg-center align-items-lg-center"
              style="height: 150px;">
-            <button id="add-student-btn" class="btn btn-primary" type="button">Add</button>
+            <button class="btn btn-primary" id="add-student-btn" type="button">Add</button>
         </div>
     </div>
 </div>
+
+<div aria-hidden="true" aria-labelledby="ResetPassword" class="modal fade" id="reset-password-modal" tabindex="-1">
+    <div style="background: rgba(0,0,0,0.7); height: 100%; width: 100%;">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="color: #f8f9fa;">
+                    <h4 class="modal-title">Reset Password</h4>
+                    <button aria-label="Close" class="" data-bs-dismiss="modal" type="button" style="background: transparent; border: none">
+                        <span class="material-symbols-rounded" style="color: white">close</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="color: #f8f9fa;">
+                    <div class="row">
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-3 d-sm-flex justify-content-sm-center align-items-sm-center">
+                            <label class="col-form-label">Email</label></div>
+                        <div class="col d-sm-flex d-md-flex justify-content-sm-end align-items-sm-center justify-content-md-end">
+                            <input class="input" type="text"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button">Reset</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/js/zectStudio---Sidebar-Menu-by-bbbootstrap.js"></script>
 <script src="scripts/addStudent.js"></script>
-</body>
 
+</body>
 </html>
