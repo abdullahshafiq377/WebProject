@@ -1,3 +1,7 @@
+document.getElementById("update-student-btn").setAttribute("disabled","")
+document.getElementById("update-student-btn").classList.add("disabled");
+
+
 const regNo = document.getElementById('regNo');
 const name = document.getElementById('name');
 const fname = document.getElementById('fname');
@@ -12,6 +16,19 @@ let validFname = false;
 let validNationality = false;
 let validContact = false;
 let validEmail = false;
+
+
+function toggleUpdateButton(){
+    if (validName && validFname && validEmail && validContact && validNationality ){
+        document.getElementById("update-student-btn").removeAttribute("disabled");
+        document.getElementById("update-student-btn").classList.remove("disabled");
+    }
+    else {
+        document.getElementById("update-student-btn").setAttribute("disabled","")
+        document.getElementById("update-student-btn").classList.add("disabled");
+    }
+}
+
 
 regNo.addEventListener('blur', () => {
 
@@ -41,6 +58,7 @@ name.addEventListener('blur', () => {
         name.classList.add('is-invalid');
         validName= false;
     }
+    toggleUpdateButton();
 })
 
 fname.addEventListener('blur', () => {
@@ -56,6 +74,7 @@ fname.addEventListener('blur', () => {
         fname.classList.add('is-invalid');
         validFname= false;
     }
+    toggleUpdateButton();
 })
 
 nationality.addEventListener('blur', () => {
@@ -71,6 +90,7 @@ nationality.addEventListener('blur', () => {
         nationality.classList.add('is-invalid');
         validNationality= false;
     }
+    toggleUpdateButton();
 })
 
 contact.addEventListener('blur', () => {
@@ -86,6 +106,7 @@ contact.addEventListener('blur', () => {
         contact.classList.add('is-invalid');
         validContact= false;
     }
+    toggleUpdateButton();
 })
 
 email.addEventListener('blur', () => {
@@ -101,4 +122,5 @@ email.addEventListener('blur', () => {
         email.classList.add('is-invalid');
         validEmail= false;
     }
+    toggleUpdateButton();
 })

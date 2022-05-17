@@ -56,7 +56,7 @@
                         <span class="material-symbols-rounded">supervisor_account</span>
                         <span class="nav_name">Teachers</span>
                     </a>
-                    <a class="nav_link" data-bs-target="#reset-password-modal" data-bs-toggle="modal">
+                    <a class="nav_link" data-bs-target="#reset-password-modal" data-bs-toggle="modal" style="cursor: pointer;">
                         <span class="material-symbols-rounded">restart_alt</span>
                         <span class="nav_name">Reset Password</span>
                     </a>
@@ -84,7 +84,7 @@
                                         <div class="col"><label class="form-label">Current Password</label></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col"><input type="password" class="input"></div>
+                                        <div class="col"><input id="current-password" type="password" class="form-control input"></div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-xl-6">
@@ -92,13 +92,13 @@
                                         <div class="col"><label class="form-label">New Password</label></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col"><input type="password" class="input"></div>
+                                        <div class="col"><input id="new-password" type="password" class="form-control input"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 d-sm-flex justify-content-sm-center align-items-sm-center">
-                            <button class="btn btn-secondary" type="button">Update</button>
+                            <button id="update-password-btn" class="btn btn-secondary" type="button">Update</button>
                         </div>
                     </div>
                 </div>
@@ -117,13 +117,13 @@
                                         <div class="col"><label class="form-label">Contact</label></div>
                                     </div>
                                     <div class="row">
-                                        <div class="col"><input type="tel" class="input"></div>
+                                        <div class="col"><input id="contact" type="tel" class="form-control input"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xl-3 d-sm-flex justify-content-sm-center align-items-sm-center">
-                            <button class="btn btn-secondary" type="button">Update</button>
+                            <button id="update-contact-btn" class="btn btn-secondary" type="button">Update</button>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,6 @@
         </div>
     </div>
 </div>
-
 
 
 <div aria-hidden="true" aria-labelledby="ResetPassword" class="modal fade" id="reset-password-modal" tabindex="-1">
@@ -149,11 +148,11 @@
                         <div class="col-2 col-sm-2 col-md-2 col-lg-3 d-sm-flex justify-content-sm-center align-items-sm-center">
                             <label class="col-form-label">Email</label></div>
                         <div class="col d-sm-flex d-md-flex justify-content-sm-end align-items-sm-center justify-content-md-end">
-                            <input class="input" type="text"></div>
+                            <input id="modal-email" class="form-control input" type="text"></div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-primary" type="button">Reset</button>
+                    <button id="reset-btn" class="btn btn-primary" type="button">Reset</button>
                 </div>
             </div>
         </div>
@@ -164,5 +163,7 @@
 
 <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="../assets/js/zectStudio---Sidebar-Menu-by-bbbootstrap.js"></script>
+<script src="scripts/settings.js"></script>
+<script src="scripts/home.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+document.getElementById("update-teacher-btn").setAttribute("disabled","")
+document.getElementById("update-teacher-btn").classList.add("disabled");
 
 const name = document.getElementById('name');
 const fname = document.getElementById('fname');
@@ -13,6 +15,18 @@ let validContact = false;
 let validEmail = false;
 
 
+function toggleUpdateButton(){
+    if (validName && validFname && validContact && validNationality ){
+        document.getElementById("update-teacher-btn").removeAttribute("disabled");
+        document.getElementById("update-teacher-btn").classList.remove("disabled");
+    }
+    else {
+        document.getElementById("update-teacher-btn").setAttribute("disabled","")
+        document.getElementById("update-teacher-btn").classList.add("disabled");
+    }
+}
+
+
 name.addEventListener('blur', () => {
 
     let regex = /^[A-Za-z ]{3,}$/;
@@ -26,6 +40,7 @@ name.addEventListener('blur', () => {
         name.classList.add('is-invalid');
         validName= false;
     }
+    toggleUpdateButton();
 })
 
 fname.addEventListener('blur', () => {
@@ -41,6 +56,7 @@ fname.addEventListener('blur', () => {
         fname.classList.add('is-invalid');
         validFname= false;
     }
+    toggleUpdateButton();
 })
 
 nationality.addEventListener('blur', () => {
@@ -56,6 +72,7 @@ nationality.addEventListener('blur', () => {
         nationality.classList.add('is-invalid');
         validNationality= false;
     }
+    toggleUpdateButton();
 })
 
 contact.addEventListener('blur', () => {
@@ -71,6 +88,7 @@ contact.addEventListener('blur', () => {
         contact.classList.add('is-invalid');
         validContact= false;
     }
+    toggleUpdateButton();
 })
 
 email.addEventListener('blur', () => {
